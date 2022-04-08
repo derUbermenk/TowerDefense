@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Node2D",
+"class": "Turret",
+"language": "GDScript",
+"path": "res://Scenes/Turrets/Turrets.gd"
+} ]
+_global_script_class_icons={
+"Turret": ""
+}
+
 [application]
 
 config/name="Tower Defense"
