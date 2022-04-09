@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/towerDefense_tile249.png-27fb9d74a46cfc24ec0260a1922eb5f1.stex"
+path="res://.import/towerDefense_tile251.png-4fc9b757839ec376a12051840703cdaa.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Towers/towerDefense_tile249.png"
-dest_files=[ "res://.import/towerDefense_tile249.png-27fb9d74a46cfc24ec0260a1922eb5f1.stex" ]
+source_file="res://Assets/Towers/towerDefense_tile251.png"
+dest_files=[ "res://.import/towerDefense_tile251.png-4fc9b757839ec376a12051840703cdaa.stex" ]
 
 [params]
 
