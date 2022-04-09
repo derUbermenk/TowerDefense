@@ -19,7 +19,11 @@ func _process(delta):
 		pass
 
 func _unhandled_input(event):
-	pass
+	if event.is_action_released("ui_cancel") and build_mode == true:
+		cancel_build_mode()
+	if event.is_action_released("ui_accept") and build_mode == true:
+		verify_and_build()
+		cancel_build_mode()
 
 func initiate_build_mode(tower_type):
 	build_type = tower_type + "T1"
@@ -40,7 +44,13 @@ func update_tower_preview():
 		build_valid = false
 
 func cancel_build_mode():
-	pass
+	build_mode = false
+	build_valid = false
+	get_node("UI/TowerPreview").queue_free()
 
 func verify_and_build():
-	pass
+	if build_valid:
+		## Test if player if player has enough cash
+		var new_tower = load("res://Scenes/Turrets/" + build_type +".tscn").instance()
+		new_tower.position = build_location
+		map_node.get_node("Turrets").add_child(new_tower, true)
