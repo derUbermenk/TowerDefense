@@ -5,6 +5,7 @@ var type
 var enemy_array = []
 var built = false
 var enemy
+var ready = true
 
 func _ready():
 	if built:
@@ -15,6 +16,7 @@ func _physics_process(delta):
 	if enemy_array.size() != 0 and built:
 		select_enemy()
 		turn() 
+		fire() if ready else null 
 	else:
 		enemy = null
 
@@ -29,6 +31,12 @@ func select_enemy():
 	var max_offset = enemy_progress_array.max() 						# find the max offset in the enemy_progress_array
 	var enemy_index = enemy_progress_array.find(max_offset) # get the index of the max offset
 	enemy = enemy_array[enemy_index]  											# enemy index and enemy max offset index is same
+
+func fire():
+	ready = false
+	enemy.on_hit(GameData.tower_data[type]["damage"])
+	yield(get_tree().create_timer(GameData.tower_data[type]["rof"]), "timeout")
+	ready = true
 
 func _on_Range_body_entered(body):
 	# body is the kinematic body of the tank
