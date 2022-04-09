@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Towers/towerDefense_tile180.png" type="Texture" id=1]
-[ext_resource path="res://Towers/towerDefense_tile249.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Towers/towerDefense_tile180.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Towers/towerDefense_tile249.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/Turrets/GunT1.gd" type="Script" id=3]
 
 [node name="GunT1" type="Node2D"]
