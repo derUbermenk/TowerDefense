@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tank_blue.png-6dffb0fe12d2d1563ba5acf68316272f.stex"
+path="res://.import/tank_blue.png-3e0443a8949320b9a1b082c65d05dcf4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemies/tank_blue.png"
-dest_files=[ "res://.import/tank_blue.png-6dffb0fe12d2d1563ba5acf68316272f.stex" ]
+source_file="res://Assets/Enemies/tank_blue.png"
+dest_files=[ "res://.import/tank_blue.png-3e0443a8949320b9a1b082c65d05dcf4.stex" ]
 
 [params]
 
