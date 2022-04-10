@@ -111,11 +111,11 @@ self_modulate = Color( 0, 0, 0, 0.470588 )
 anchor_right = 1.0
 rect_min_size = Vector2( 0, 60 )
 
-[node name="HBoxContainer" type="HBoxContainer" parent="UI/HUD/InfoBar"]
+[node name="H" type="HBoxContainer" parent="UI/HUD/InfoBar"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 
-[node name="Symbol" type="Label" parent="UI/HUD/InfoBar/HBoxContainer"]
+[node name="Symbol" type="Label" parent="UI/HUD/InfoBar/H"]
 margin_right = 120.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 120, 60 )
@@ -124,7 +124,7 @@ text = "$"
 align = 2
 valign = 1
 
-[node name="Money" type="Label" parent="UI/HUD/InfoBar/HBoxContainer"]
+[node name="Money" type="Label" parent="UI/HUD/InfoBar/H"]
 margin_left = 124.0
 margin_right = 234.0
 margin_bottom = 60.0
@@ -134,7 +134,7 @@ text = "100"
 align = 2
 valign = 1
 
-[node name="HomeHPIcon" type="TextureRect" parent="UI/HUD/InfoBar/HBoxContainer"]
+[node name="HomeHPIcon" type="TextureRect" parent="UI/HUD/InfoBar/H"]
 margin_left = 742.0
 margin_right = 802.0
 margin_bottom = 60.0
@@ -143,7 +143,7 @@ size_flags_horizontal = 10
 texture = ExtResource( 13 )
 expand = true
 
-[node name="HomeHP" type="TextureProgress" parent="UI/HUD/InfoBar/HBoxContainer"]
+[node name="HomeHP" type="TextureProgress" parent="UI/HUD/InfoBar/H"]
 margin_left = 806.0
 margin_top = 15.0
 margin_right = 1206.0
@@ -157,9 +157,9 @@ tint_under = Color( 0.227451, 0.227451, 0.227451, 1 )
 tint_progress = Color( 0.317647, 0.835294, 0.396078, 1 )
 nine_patch_stretch = true
 
-[node name="Tween" type="Tween" parent="UI/HUD/InfoBar/HBoxContainer/HomeHP"]
+[node name="Tween" type="Tween" parent="UI/HUD/InfoBar/H/HomeHP"]
 
-[node name="right_padding" type="Control" parent="UI/HUD/InfoBar/HBoxContainer"]
+[node name="right_padding" type="Control" parent="UI/HUD/InfoBar/H"]
 margin_left = 1210.0
 margin_right = 1280.0
 margin_bottom = 60.0
