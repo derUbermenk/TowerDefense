@@ -1,7 +1,10 @@
 extends PathFollow2D
 
+signal base_damage(damage)
+
 var speed = 150
-var hp = 50
+var hp = 1000
+var base_damage = 21
 
 onready var health_bar = get_node("HealthBar")
 onready var impact_area = get_node("Impact") # onready instantiate this var
@@ -18,10 +21,14 @@ func _ready():
 	health_bar.set_as_toplevel(true)
 
 func _physics_process(delta):
+	if unit_offset == 1.0: ## if at the end of the path
+		emit_signal("base_damage", base_damage) # emit signal with data base_damage
+		queue_free()
 	move(delta)
 
 func move(delta):
-	set_offset(get_offset() + speed * delta)
+	set_offset(get_offset() + speed * delta)  # *_offset defines how much pixels in the path has been traveled
+																				    # unit offset relative position relative to total number of pixels in path
 	health_bar.set_position(position - Vector2(30, 30))
 	# disconnecting from parent resets health_bar's
 	# position to origin. substracting 30, 30 to the position
