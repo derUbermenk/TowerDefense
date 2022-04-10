@@ -2,6 +2,7 @@ extends Node2D
 class_name Turret
 
 var type
+var category
 var enemy_array = []
 var built = false
 var enemy
@@ -34,9 +35,19 @@ func select_enemy():
 
 func fire():
 	ready = false
+	if category == "Projectile":
+		fire_gun()
+	elif category == "Missile":
+		fire_missile()
 	enemy.on_hit(GameData.tower_data[type]["damage"])
 	yield(get_tree().create_timer(GameData.tower_data[type]["rof"]), "timeout")
 	ready = true
+
+func fire_gun():
+ get_node("AnimationPlayer").play("Fire")	
+
+func fire_missile():
+	pass
 
 func _on_Range_body_entered(body):
 	# body is the kinematic body of the tank
