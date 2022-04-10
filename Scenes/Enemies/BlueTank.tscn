@@ -31,3 +31,6 @@ texture_progress = ExtResource( 3 )
 tint_under = Color( 0, 0, 0, 1 )
 tint_progress = Color( 0.105882, 0.541176, 0, 1 )
 nine_patch_stretch = true
+
+[node name="Impact" type="Position2D" parent="."]
+position = Vector2( -15, -15 )
